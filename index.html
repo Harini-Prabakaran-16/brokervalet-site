@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Backline</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230e6b63'/%3E%3Crect x='7' y='10' width='18' height='3.4' rx='1.7' fill='%23fff' opacity='.55'/%3E%3Crect x='7' y='18.6' width='18' height='3.4' rx='1.7' fill='%23fff'/%3E%3C/svg%3E">
-<meta name="description" content="Backline takes renewal and policy admin off your brokers' desks, so they can spend their time on complex, higher-value work and grow their careers with you.">
-<meta property="og:title" content="Backline — renewal and policy admin for insurance brokers">
+<title>Broker Valet</title>
+<link rel="icon" type="image/png" href="logo-mark.png">
+<meta name="description" content="Broker Valet takes renewal and policy admin off your brokers' desks, so they can spend their time on complex, higher-value work and grow their careers with you.">
+<meta property="og:title" content="Broker Valet — renewal and policy admin for insurance brokers">
 <meta property="og:description" content="Give your brokers their time back. A dedicated admin team, supported by smart digital workers, handles your renewals from start to finish.">
 <meta property="og:type" content="website">
 
 
 <style>
   :root{
-    --ink:#0f1c2e; --muted:#51607a; --line:#e3e8ef; --bg:#fbfaf7; --surface:#ffffff;
-    --brand:#0e6b63; --brand-dark:#0a4f49; --brand-tint:#e6f3f1; --accent:#e8a33d;
+    --ink:#0f1c2e; --muted:#51607a; --line:#e3e8ef; --bg:#fbfaff; --surface:#ffffff;
+    --brand:#4a2d8a; --brand-dark:#2d1a63; --brand-tint:#f1ecf9; --accent:#7a5bb5;
     --amber-bg:#fdf3e0; --amber-ink:#8a5a0c; --blue-bg:#e8f0fe; --blue-ink:#1d4ed8; --green-bg:#e3f4ea; --green-ink:#166534;
     --radius:16px; --shadow:0 1px 2px rgba(15,28,46,.05),0 8px 28px rgba(15,28,46,.07);
   }
@@ -34,10 +34,12 @@
   .section-head p{margin-top:14px;color:var(--muted);font-size:18px}
 
   /* header */
-  header.site{position:sticky;top:0;z-index:20;background:rgba(251,250,247,.9);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+  header.site{position:sticky;top:0;z-index:20;background:rgba(251,250,255,.9);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
   .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:800;font-size:21px;letter-spacing:-.02em}
-  .brand svg{width:30px;height:30px;flex:none}
+  .brand img{display:block;flex:none;mix-blend-mode:multiply}
+  .brand .mark{width:40px;height:40px}
+  .brand .word{height:17px;width:auto}
   .nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0}
   .nav ul a{display:block;color:var(--muted);text-decoration:none;font-size:15px;font-weight:600;padding:8px 14px;border-radius:999px;transition:background .15s,color .15s}
   .nav ul a:hover{color:var(--ink)}
@@ -57,7 +59,7 @@
   .btn-ghost{background:transparent;color:var(--ink);border-color:#c9d2de}
   .btn-ghost:hover{border-color:var(--ink)}
   .btn-light{background:#fff;color:var(--brand-dark)}
-  .btn-light:hover{transform:translateY(-1px);background:#f2fbf9}
+  .btn-light:hover{transform:translateY(-1px);background:#f6f2fc}
   .btn-sm{padding:9px 18px;font-size:14.5px}
   /* mobile menu */
   .menu-btn{display:none;order:3;width:44px;height:44px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);cursor:pointer;place-items:center;padding:0}
@@ -132,7 +134,7 @@
   .card p{font-size:15.5px;color:var(--muted)}
 
   /* career */
-  .career{background:linear-gradient(180deg,var(--bg),#f1efe8)}
+  .career{background:linear-gradient(180deg,var(--bg),#f1ecf9)}
   .ladder{display:grid;gap:12px}
   .rung{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
   .rung .n{width:38px;height:38px;border-radius:50%;background:var(--brand);color:#fff;font-weight:800;display:grid;place-items:center}
@@ -160,12 +162,12 @@
 
   /* demo band */
   .demo{background:var(--brand-dark);color:#fff}
-  .demo .eyebrow{color:#9ee0d6}
+  .demo .eyebrow{color:#cdbdf0}
   .demo h2{font-size:clamp(28px,3.6vw,42px);margin:10px 0 16px}
-  .demo p{color:#cfe9e5;font-size:18px;max-width:52ch}
+  .demo p{color:#e1d8f3;font-size:18px;max-width:52ch}
   .demo ul{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:12px}
   .demo li{display:grid;grid-template-columns:26px 1fr;gap:12px;color:#fff;font-size:16.5px}
-  .demo li svg{width:22px;height:22px;stroke:#9ee0d6;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;margin-top:3px}
+  .demo li svg{width:22px;height:22px;stroke:#cdbdf0;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;margin-top:3px}
   .demo-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:34px}
   .demo-card h3{font-size:24px;margin-bottom:10px}
   .demo-card p{font-size:16px;margin-bottom:24px}
@@ -192,7 +194,7 @@
   dialog.video{border:0;padding:0;border-radius:18px;width:min(960px,calc(100vw - 32px));background:#000;box-shadow:0 20px 60px rgba(0,0,0,.35)}
   dialog.video::backdrop{background:rgba(15,28,46,.72)}
   .video-frame{position:relative;aspect-ratio:16/9}
-  .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .video-frame video{position:absolute;inset:0;width:100%;height:100%;background:#000}
   .video-close{position:absolute;top:10px;right:10px;z-index:2;width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:var(--ink);font-size:22px;line-height:1;cursor:pointer}
 </style>
 </head>
@@ -200,9 +202,9 @@
 
 <header class="site">
   <div class="wrap nav">
-    <a class="brand" href="#top" aria-label="Backline home">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#0e6b63"/><rect x="7" y="10" width="18" height="3.4" rx="1.7" fill="#fff" opacity=".55"/><rect x="7" y="18.6" width="18" height="3.4" rx="1.7" fill="#fff"/></svg>
-      Backline
+    <a class="brand" href="#top" aria-label="Broker Valet home">
+      <img class="mark" src="logo-mark.png" alt="" width="40" height="40">
+      <img class="word" src="logo-word.png" alt="Broker Valet" width="149" height="17">
     </a>
     <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-menu">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path class="l1" d="M4 7h16"/><path class="l2" d="M4 12h16"/><path class="l3" d="M4 17h16"/></svg>
@@ -227,9 +229,9 @@
     <div>
       <div class="eyebrow">Renewal and policy admin for insurance brokers</div>
       <h1>Give your brokers their time back — for the work that <em>grows</em> your business.</h1>
-      <p class="lead">Backline takes the renewal and policy admin off your brokers' desks. A dedicated admin team, supported by smart digital workers, runs each renewal from start to finish — while you stay in charge of every decision.</p>
+      <p class="lead">Broker Valet takes the renewal and policy admin off your brokers' desks. A dedicated admin team, supported by smart digital workers, runs each renewal from start to finish — while you stay in charge of every decision.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="https://workdrive.zohopublic.com.au/embed/otkge19c75abf4da548378b127372c3c817bc?toolbar=false&amp;appearance=light&amp;themecolor=green" data-demo>Watch the demo</a>
+        <a class="btn btn-primary" href="demo.mp4" data-demo>Watch the demo</a>
         <a class="btn btn-ghost" href="#how">See how it works</a>
       </div>
       <p class="hero-note">No integration project. No new system for your team to learn. A short video shows it working.</p>
@@ -376,8 +378,8 @@
     <h2>Let's take some admin off your desk.</h2>
     <p>Watch the demo first, then talk it through with us — we'll show how it would work for your brokerage.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="https://workdrive.zohopublic.com.au/embed/otkge19c75abf4da548378b127372c3c817bc?toolbar=false&amp;appearance=light&amp;themecolor=green" data-demo>Watch the demo</a>
-      <a class="btn btn-ghost" href="mailto:admin@avanext.ai?subject=Backline%20enquiry">Talk to us</a>
+      <a class="btn btn-primary" href="demo.mp4" data-demo>Watch the demo</a>
+      <a class="btn btn-ghost" href="mailto:admin@avanext.ai?subject=Broker%20Valet%20enquiry">Talk to us</a>
     </div>
     <p style="margin-top:22px;font-size:15px">Or email <a href="mailto:admin@avanext.ai">admin@avanext.ai</a></p>
   </div>
@@ -387,14 +389,14 @@
 
 <footer>
   <div class="wrap">
-    <span>© <span id="yr">2026</span> Backline. All rights reserved.</span>
+    <span>© <span id="yr">2026</span> Broker Valet. All rights reserved.</span>
     <span>Renewal and policy admin for insurance brokers</span>
   </div>
 </footer>
 
-<dialog class="video" id="demo-video" aria-label="Backline demo video">
+<dialog class="video" id="demo-video" aria-label="Broker Valet demo video">
   <button class="video-close" type="button" aria-label="Close video">&times;</button>
-  <div class="video-frame"><iframe data-src="https://workdrive.zohopublic.com.au/embed/otkge19c75abf4da548378b127372c3c817bc?toolbar=false&amp;appearance=light&amp;themecolor=green" title="Backline demo video" allow="fullscreen" allowfullscreen></iframe></div>
+  <div class="video-frame"><video data-src="demo.mp4" controls playsinline preload="none"></video></div>
 </dialog>
 
 <script>
@@ -472,18 +474,19 @@
   window.addEventListener("scrollend", function(){ locked=false; });
   if(!location.hash) markActive();
 
-  var dlg=document.getElementById("demo-video"), frame=dlg.querySelector("iframe");
+  var dlg=document.getElementById("demo-video"), frame=dlg.querySelector("video");
   if (typeof dlg.showModal === "function") {
     document.querySelectorAll("[data-demo]").forEach(function(a){
       a.addEventListener("click", function(e){
         e.preventDefault();
-        frame.src = frame.getAttribute("data-src");
+        if(!frame.getAttribute("src")) frame.src = frame.getAttribute("data-src");
         dlg.showModal();
+        frame.play().catch(function(){});
       });
     });
     dlg.querySelector(".video-close").addEventListener("click", function(){ dlg.close(); });
     dlg.addEventListener("click", function(e){ if (e.target === dlg) dlg.close(); });
-    dlg.addEventListener("close", function(){ frame.src = "about:blank"; });
+    dlg.addEventListener("close", function(){ frame.pause(); });
   }
 })();
 </script>
